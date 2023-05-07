@@ -8,6 +8,8 @@ It is usefeul to encrypt secrets to commit in a repository, since the only one t
 
 The motivation for this project is to provide a simple way to encrypt data to be used in [Terraform](https://www.terraform.io/) projects.
 
+![alt text](https://github.com/MrKoopaKiller/kms-encrypter/blob/assets/images/kmsenc.png?raw=true)
+
 ## How it works
 
 It uses the AWS SDK for Python (Boto3) to connect to AWS KMS and encrypt the data. The encrypted data is displayed in the web page and can be copied to the clipboard. **The data is not stored anywhere.**
