@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - APP_ADMIN_EMAIL=dev@company.com
+      - APP_ADMIN_PASSWORD=ItWorks-0n-my-pc
+    volumes:
+      - ./config_local.yaml:/home/nonroot/config.yaml
+      - ${HOME}/.aws:/home/nonroot/.aws

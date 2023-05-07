@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+email-validator = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-security-too = {extras = ["common", "fsqla"], version = "*"}
+boto3 = "*"
+pyyaml = "*"
+
+[dev-packages]
+black = "*"
+pycodestyle = "*"
+
+[requires]
+python_version = "3.10"

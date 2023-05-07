@@ -1,0 +1,4 @@
+# ignore database files
+myapp.db
+# Ignore the config.yaml file
+config.yaml

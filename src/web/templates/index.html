@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Encrypt
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="title">KMS Encrypter</h1>
+  <script src="app.js"></script>
+  <h3>Select an account:</h3>
+  <select id="account-dropdown">
+    {% for account in accounts %}
+    <option value="{{ account }}">{{ account }}</option>
+    {% endfor %}
+  </select>
+  <select id="region-dropdown">
+    {% for region in regions %}
+    <option value="{{ region }}">{{ region }}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+  <button onclick="getKMSAliases()">List Keys</button>
+  <br><br>
+  <select id="aliases-dropdown">
+  </select>
+  <br><br>
+  <textarea id="input-text" rows="10" cols="25" placeholder="Enter input here"></textarea>
+  <h4>Encryption context:</h4>
+  <input type="text" id="enc-context-key" placeholder="Key" style="width: 150px; margin-left: 10px;">
+  <input type="text" id="enc-context-value" placeholder="Value" style="width: 150px; margin-left: 10px;">
+  <br><br>
+  <button onclick="encryptData()">Encrypt</button>
+  <br><br>
+  <textarea id="output-text" rows="10" cols="50" placeholder="Server response will appear here" readonly></textarea>
+  <br><br>
+  <button onclick="copyToClipboard()">Copy</button>
+</div>
+<br><br>
+{% endblock %}
